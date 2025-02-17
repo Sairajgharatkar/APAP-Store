@@ -1,0 +1,17 @@
+:where([class^="ri-"])::before { content: "\f3c2"; }
+        .auction-timer { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .bid-button:hover { transform: translateY(-2px); }
+        .category-card:hover { transform: translateY(-8px); }
+        .toast {
+            animation: slideIn 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
