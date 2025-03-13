@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9F7AEA',
+                        secondary: '#F6E3FF'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-8">
+                    <h1 class="text-3xl font-['Pacifico'] text-primary">APAP Store</h1>
+                    <nav class="hidden md:flex space-x-8">
+                        <button class="text-gray-600 hover:text-primary transition-colors" id="categoriesBtn">
+                            Categories <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <a href="#live-auctions" class="text-gray-600 hover:text-primary transition-colors">Live Auctions</a>
+                        <a href="#trending" class="text-gray-600 hover:text-primary transition-colors">Trending</a>
+                        <a href="#how-it-works" class="text-gray-600 hover:text-primary transition-colors">How It Works</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 rounded-full bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary/20 w-64">
+                        <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <button class="relative w-10 h-10 flex items-center justify-center">
+                        <i class="ri-heart-line text-xl text-gray-600"></i>
+                        <span class="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">3</span>
+                    </button>
+                    <button class="relative w-10 h-10 flex items-center justify-center">
+                        <i class="ri-shopping-bag-line text-xl text-gray-600"></i>
+                        <span class="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">2</span>
+                    </button>
+                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 transition-colors">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="pt-20">
+        <section class="relative h-[600px] flex items-center" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/20"></div>
+            <div class="container mx-auto px-4 relative">
+                <div class="max-w-2xl">
+                    <h2 class="text-5xl font-['Playfair_Display'] font-bold text-gray-900 mb-6">Bid & Win Exclusive Designer Fashion</h2>
+                    <p class="text-xl text-gray-600 mb-8">Join our unique fashion auction platform where luxury meets excitement. Bid on premium designer pieces at incredible prices.</p>
+                    <div class="flex space-x-4">
+                        <button class="bg-primary text-white px-8 py-3 rounded-button hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1">
+                            Start Bidding
+                        </button>
+                        <button class="bg-white text-primary px-8 py-3 rounded-button border-2 border-primary hover:bg-primary/5 transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-['Playfair_Display'] font-bold text-center mb-12">Featured Auctions</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.squarespace-cdn.com/content/v1/61623cb130f99c717ad698f3/1652820844894-CJZ6L7LFJDBWBKOVCOVK/image64.jpeg?format=1500w" class="w-full h-80 object-cover" alt="Auction Item">
+                            <div class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full">
+                                <span class="auction-timer">02:45:30</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Gucci Silk Evening Gown</h4>
+                            <p class="text-gray-600 mb-4">Limited Edition SS25 Collection</p>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Current Bid</p>
+                                    <p class="text-2xl font-bold text-primary">$1,250</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Retail Price</p>
+                                    <p class="text-lg text-gray-400 line-through">$3,500</p>
+                                </div>
+                            </div>
+                            <button class="w-full bg-primary text-white py-3 rounded-button hover:bg-primary/90 transition-all duration-300 bid-button">
+                                Place Bid
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj77ZbtDJVKCQ3n65sOmV5e65FOVkR29knj6TE1VWSjUJ80CEgpDyodySL21AsKGO-z1IvURjvbasdntAhcH0QWixUmxmywHteeG6dEe4KdZCzCurVS3HqSWUHeuroLXDQH9pH30v1a0aE/s1600/IMG_4602.JPG" class="w-full h-80 object-cover" alt="Auction Item">
+                            <div class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full">
+                                <span class="auction-timer">04:15:45</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Vintage Guess Bag Y2K Monogram</h4>
+                            <p class="text-gray-600 mb-4">Authentic Limited Edition</p>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Current Bid</p>
+                                    <p class="text-2xl font-bold text-primary">$13,500</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Retail Price</p>
+                                    <p class="text-lg text-gray-400 line-through">$15,000</p>
+                                </div>
+                            </div>
+                            <button class="w-full bg-primary text-white py-3 rounded-button hover:bg-primary/90 transition-all duration-300 bid-button">
+                                Place Bid
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://shop.mango.com/assets/rcs/pics/static/T8/fotos/outfit/S/87010344_99-99999999_01.jpg?imwidth=640&imdensity=1&ts=1731074800992" class="w-full h-80 object-cover" alt="Auction Item">
+                            <div class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full">
+                                <span class="auction-timer">01:30:15</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Mango jara Wool Coat</h4>
+                            <p class="text-gray-600 mb-4">Classic Heritage Collection</p>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Current Bid</p>
+                                    <p class="text-2xl font-bold text-primary">$950</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Retail Price</p>
+                                    <p class="text-lg text-gray-400 line-through">$2,800</p>
+                                </div>
+                            </div>
+                            <button class="w-full bg-primary text-white py-3 rounded-button hover:bg-primary/90 transition-all duration-300 bid-button">
+                                Place Bid
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-['Playfair_Display'] font-bold text-center mb-12">Shop by Category</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="category-card bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 cursor-pointer">
+                        <img src="https://www.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dwc5c86541/images/ss24/casual2479ss24grn_1-1.jpg?sw=502&sh=753" class="w-full h-48 object-cover" alt="Dresses">
+                        <div class="p-4 text-center">
+                            <h4 class="text-lg font-semibold">Dresses</h4>
+                            <p class="text-gray-500">150+ Items</p>
+                        </div>
+                    </div>
+                    <div class="category-card bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 cursor-pointer">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj77ZbtDJVKCQ3n65sOmV5e65FOVkR29knj6TE1VWSjUJ80CEgpDyodySL21AsKGO-z1IvURjvbasdntAhcH0QWixUmxmywHteeG6dEe4KdZCzCurVS3HqSWUHeuroLXDQH9pH30v1a0aE/s1600/IMG_4602.JPG" class="w-full h-48 object-cover" alt="Bags">
+                        <div class="p-4 text-center">
+                            <h4 class="text-lg font-semibold">Bags</h4>
+                            <p class="text-gray-500">80+ Items</p>
+                        </div>
+                    </div>
+                    <div class="category-card bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 cursor-pointer">
+                        <img src="https://s.alicdn.com/@sc04/kf/H91d7a6031fc8421ebc31daa2f3753b3dB.jpg_720x720q50.jpg" class="w-full h-48 object-cover" alt="Shoes">
+                        <div class="p-4 text-center">
+                            <h4 class="text-lg font-semibold">Shoes</h4>
+                            <p class="text-gray-500">120+ Items</p>
+                        </div>
+                    </div>
+                    <div class="category-card bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 cursor-pointer">
+                        <img src="https://kallos.co.in/cdn/shop/files/LatestAmericanDiamondJewellerySetinRoundShapeMotifDesign_1.jpg?v=1703784486&width=990" class="w-full h-48 object-cover" alt="Jewelry">
+                        <div class="p-4 text-center">
+                            <h4 class="text-lg font-semibold">Jewelry</h4>
+                            <p class="text-gray-500">200+ Items</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-['Playfair_Display'] font-bold text-center mb-12">How It Works</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-user-add-line text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4">Create Account</h4>
+                        <p class="text-gray-600">Sign up and verify your account to start bidding on exclusive items</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-auction-line text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4">Place Your Bid</h4>
+                        <p class="text-gray-600">Browse auctions and place bids on your favorite designer items</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-trophy-line text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4">Win & Receive</h4>
+                        <p class="text-gray-600">Win auctions and receive authentic designer items at great prices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="bg-primary/5 rounded-xl p-12 text-center">
+                    <h3 class="text-3xl font-['Playfair_Display'] font-bold mb-6">Join Our Fashion Community</h3>
+                    <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Subscribe to our newsletter and be the first to know about new auctions, exclusive deals, and fashion trends.</p>
+                    <div class="flex max-w-md mx-auto">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-button border-none focus:outline-none focus:ring-2 focus:ring-primary/20">
+                        <button class="bg-primary text-white px-8 py-3 rounded-r-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-900 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div>
+                        <h1 class="text-3xl font-['Pacifico'] text-white mb-6">APAP Store</h1>
+                        <p class="text-gray-400">Your destination for luxury fashion auctions. Bid, win, and wear designer pieces at incredible prices.</p>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold mb-4">Customer Service</h5>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Info</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Track Order</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold mb-4">Connect With Us</h5>
+                        <div class="flex space-x-4 mb-6">
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="ri-facebook-line"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="ri-pinterest-line"></i>
+                            </a>
+                        </div>
+                        <div class="flex space-x-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Visa_2021.svg/345px-Visa_2021.svg.png" alt="Visa" class="h-8">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1158px-Mastercard-logo.svg.png?20210817144358" alt="Mastercard" class="h-8">
+                            <img src="https://img.etimg.com/thumb/msid-74960608,width-300,height-225,imgsize-49172,resizemode-75/upi-twitter.jpg" alt="UPI" class="h-8">
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                    <p class="text-gray-400">&copy; 2025 APAP. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden toast">
+        Bid placed successfully!
+    </div>
+
+    <script>
+        document.querySelectorAll('.bid-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const toast = document.getElementById('toast');
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 3000);
+            });
+        });
+
+        const countdowns = document.querySelectorAll('.auction-timer');
+        countdowns.forEach(timer => {
+            const updateTimer = () => {
+                let time = timer.textContent.split(':');
+                let hours = parseInt(time[0]);
+                let minutes = parseInt(time[1]);
+                let seconds = parseInt(time[2]);
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes < 0) {
+                        minutes = 59;
+                        hours--;
+                        if (hours < 0) {
+                            timer.textContent = "Auction Ended";
+                            return;
+                        }
+                    }
+                }
+
+                timer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            };
+
+            setInterval(updateTimer, 1000);
+        });
+
+        const categoriesBtn = document.getElementById('categoriesBtn');
+        let dropdown = null;
+
+        categoriesBtn.addEventListener('click', () => {
+            if (dropdown) {
+                dropdown.remove();
+                dropdown = null;
+                return;
+            }
+
+            dropdown = document.createElement('div');
+            dropdown.className = 'absolute top-full left-0 bg-white shadow-lg rounded-lg py-4 w-64 mt-2';
+            dropdown.innerHTML = `
+                <a href="#" class="block px-6 py-2 hover:bg-gray-50">Dresses</a>
+                <a href="#" class="block px-6 py-2 hover:bg-gray-50">Bags</a>
+                <a href="#" class="block px-6 py-2 hover:bg-gray-50">Shoes</a>
+                <a href="#" class="block px-6 py-2 hover:bg-gray-50">Jewelry</a>
+                <a href="#" class="block px-6 py-2 hover:bg-gray-50">Accessories</a>
+            `;
+
+            categoriesBtn.parentElement.appendChild(dropdown);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (dropdown && !categoriesBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.remove();
+                dropdown = null;
+            }
+        });
+    </script>
+    </body>
+    </html>
